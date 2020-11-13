@@ -1,4 +1,28 @@
+@font-face {
+  font-family: "roboto";
+  src: url("roboto/Roboto-Black.ttf");
+  src: url("roboto/Roboto-BlackItalic.ttf");
+  src: url("roboto/Roboto-Bold");
+  src: url("roboto/Roboto-Boldtalic.ttf");
+  src: url("roboto/RobotoCondensed-bold.ttf");
+  src: url("roboto/RobotoCondensed-BoldItalic.ttf");
+  src: url("roboto/RobotoCondensed-Italic.ttf");
+  src: url("roboto/RobotoCondensed-Light.ttf");
+  src: url("roboto/RobotoCondensed-LightItalic.ttf");
+  src: url("roboto/RobotoCondensed-Regular.ttf");
+  src: url("roboto/Roboto-Italic.ttf");
+  src: url("roboto/Roboto-Light.ttf");
+  src: url("roboto/Roboto-LightItalic.ttf");
+  src: url("roboto/Roboto-Medium.ttf");
+  src: url("roboto/Roboto-MediumItalic.ttf");
+  src: url("roboto/Roboto-Regular.ttf");
+  src: url("roboto/Roboto-Thin.ttf");
+  src: url("roboto/Roboto-ThinItalic.ttf");
+  font-family: "shrikhand";
+  src: url("Shrikhand-Regular");
+}
 body {
+  font-family: "roboto", sans-serif;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -7,7 +31,7 @@ body {
 header img {
   display: block;
   margin: auto;
-  width: 65%;
+  width: 50%;
   image-rendering: optimizeQuality;
   margin-bottom: 10px;
   margin-top: 20px;
@@ -23,14 +47,14 @@ header img {
 }
 .explorer i {
   position: absolute;
-  left: 53px;
-  top: 9px;
+  left: 75px;
+  top: 10px;
 }
 .explorer input {
-  font-size: 1.3em;
+  font-size: 1em;
   width: 100%;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   background-color: #cfcdcd;
   border-top: 3px solid #adacac;
   border-left: none;
@@ -38,23 +62,70 @@ header img {
   text-align: center;
 }
 .explorer h2 {
+  font-family: "shrikhand";
   text-align: center;
-  font-size: 1.8em;
+  font-weight: bold;
   margin-bottom: 0;
+  font-size: 1.5em;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 .explorer p {
   text-align: center;
-  font-size: 1.2em;
+  font-size: 0.9em;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 .explorer button {
   display: block;
   margin: auto;
   border-radius: 50px;
   padding: 15px;
-  font-size: 1em;
   color: white;
   background-image: linear-gradient(#ff79da, #9356dc);
   border: none;
+}
+
+nav h2 {
+  font-family: "shrikhand";
+  font-weight: bold;
+  margin-bottom: 0;
+  margin-left: 15px;
+  font-size: 1.35em;
+}
+nav ul {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 25px;
+  margin-right: 10px;
+}
+nav span {
+  position: absolute;
+  left: -10px;
+  top: 9px;
+  color: white;
+  border: 1px solid #9356dc;
+  border-radius: 50%;
+  background-color: #9356dc;
+  padding: 5px;
+}
+nav li {
+  width: 100%;
+  margin-bottom: 20px;
+}
+nav button {
+  position: relative;
+  width: 100%;
+  font-size: 0.9em;
+  padding: 15px;
+  padding-right: 55px;
+  border-radius: 12px;
+  background-color: #e4e2e2;
+  border: none;
+  box-shadow: 0px 2px 5px 2px grey;
+}
+nav i {
+  margin-right: 20px;
 }
 
 /*# sourceMappingURL=.style.css.map */
