@@ -128,4 +128,24 @@ nav i {
   margin-right: 20px;
 }
 
-/*# sourceMappingURL=.style.css.map */
+article {
+  width: 100%;
+  background-color: #e4e2e2;
+}
+article h2 {
+  font-family: "shrikhand";
+  font-weight: bold;
+  margin-bottom: 0;
+  margin-left: 15px;
+  font-size: 1.35em;
+}
+article figure {
+  width: 100%;
+  margin: 0;
+}
+article img {
+  width: 100%;
+  margin: 0;
+}
+
+/*# sourceMappingURL=style.css.map */
