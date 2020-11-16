@@ -1,38 +1,30 @@
 @font-face {
   font-family: "roboto";
-  src: url("roboto/Roboto-Black.ttf");
-  src: url("roboto/Roboto-BlackItalic.ttf");
-  src: url("roboto/Roboto-Bold");
-  src: url("roboto/Roboto-Boldtalic.ttf");
-  src: url("roboto/RobotoCondensed-bold.ttf");
-  src: url("roboto/RobotoCondensed-BoldItalic.ttf");
-  src: url("roboto/RobotoCondensed-Italic.ttf");
-  src: url("roboto/RobotoCondensed-Light.ttf");
-  src: url("roboto/RobotoCondensed-LightItalic.ttf");
-  src: url("roboto/RobotoCondensed-Regular.ttf");
-  src: url("roboto/Roboto-Italic.ttf");
-  src: url("roboto/Roboto-Light.ttf");
-  src: url("roboto/Roboto-LightItalic.ttf");
-  src: url("roboto/Roboto-Medium.ttf");
-  src: url("roboto/Roboto-MediumItalic.ttf");
-  src: url("roboto/Roboto-Regular.ttf");
-  src: url("roboto/Roboto-Thin.ttf");
-  src: url("roboto/Roboto-ThinItalic.ttf");
+  src: url("fonts/Roboto-Black.ttf");
+  src: url("fonts/Roboto-Bold.ttf");
+  src: url("fonts/Roboto-Light.ttf");
+  src: url("fonts/Roboto-Medium.ttf.ttf");
+  src: url("fonts/Roboto-Regular.ttf");
+}
+@font-face {
   font-family: "shrikhand";
-  src: url("Shrikhand-Regular");
+  src: url("fonts/Shrikhand-Regular.ttf");
 }
 body {
-  font-family: "roboto", sans-serif;
+  font-family: "roboto";
   width: 100%;
   margin: 0;
   padding: 0;
 }
+body button {
+  font-family: "roboto";
+}
 
 header img {
+  image-rendering: optimizeQuality;
   display: block;
   margin: auto;
   width: 50%;
-  image-rendering: optimizeQuality;
   margin-bottom: 10px;
   margin-top: 20px;
 }
@@ -48,23 +40,25 @@ header img {
 .explorer i {
   position: absolute;
   left: 75px;
-  top: 10px;
+  top: 13px;
 }
 .explorer input {
+  font-family: "roboto";
   font-size: 1em;
   width: 100%;
+  padding: 0;
   padding-top: 10px;
   padding-bottom: 10px;
   background-color: #cfcdcd;
   border-top: 3px solid #adacac;
   border-left: none;
+  border-right: none;
   border-bottom: none;
   text-align: center;
 }
 .explorer h2 {
-  font-family: "shrikhand";
   text-align: center;
-  font-weight: bold;
+  font-weight: 900;
   margin-bottom: 0;
   font-size: 1.5em;
   margin-left: 40px;
@@ -87,8 +81,7 @@ header img {
 }
 
 nav h2 {
-  font-family: "shrikhand";
-  font-weight: bold;
+  font-weight: 900;
   margin-bottom: 0;
   margin-left: 15px;
   font-size: 1.35em;
@@ -96,8 +89,9 @@ nav h2 {
 nav ul {
   list-style: none;
   padding-left: 0;
-  margin-left: 25px;
+  margin-left: 20px;
   margin-right: 10px;
+  margin-bottom: 50px;
 }
 nav span {
   position: absolute;
@@ -117,6 +111,7 @@ nav button {
   position: relative;
   width: 100%;
   font-size: 0.9em;
+  font-weight: bold;
   padding: 15px;
   padding-right: 55px;
   border-radius: 12px;
@@ -124,28 +119,148 @@ nav button {
   border: none;
   box-shadow: 0px 2px 5px 2px grey;
 }
+nav button:hover {
+  background-color: #c2aeda;
+}
 nav i {
   margin-right: 20px;
+}
+nav i:hover {
+  color: #9356dc;
+}
+nav .phone {
+  margin-left: 12px;
+  padding-right: 5px;
 }
 
 article {
   width: 100%;
   background-color: #e4e2e2;
 }
+article div {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 30px;
+}
 article h2 {
-  font-family: "shrikhand";
-  font-weight: bold;
+  font-weight: 900;
+  padding-top: 40px;
+  padding-bottom: 20px;
   margin-bottom: 0;
   margin-left: 15px;
   font-size: 1.35em;
 }
 article figure {
+  position: relative;
   width: 100%;
   margin: 0;
+  margin-bottom: 15px;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 0px 2px 5px 2px grey;
 }
 article img {
   width: 100%;
+  height: 215px;
+  border-radius: 15px 15px 0 0;
+  image-rendering: pixelated;
+}
+article button {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  color: green;
+  background-color: #99e2d0;
+  border-radius: 3px;
+  border: none;
+}
+article figcaption {
+  position: relative;
+  font-weight: 900;
+  margin-top: 10px;
+  margin-left: 10px;
+  padding-bottom: 1px;
+  text-decoration: none;
+}
+article i {
+  position: absolute;
+  right: 25px;
+  font-size: 1.5em;
+}
+article input {
+  display: none;
+  border: none;
+  font-size: 1.5em;
+}
+article p {
+  font-weight: normal;
+  margin-top: 0;
+}
+
+footer {
+  background-color: black;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+footer h3 {
+  font-family: "shrikhand";
+  color: #fff;
+  font-weight: 100;
   margin: 0;
+  margin-left: 15px;
+}
+footer p {
+  color: #fff;
+  margin-left: 15px;
+}
+footer i {
+  margin-right: 10px;
+}
+footer .ustensils {
+  margin-right: 18px;
+}
+
+@media all and (min-width: 768px) {
+  .explorer i {
+    margin-left: 30%;
+  }
+
+  nav ul {
+    display: flex;
+    column-gap: 20px;
+  }
+  nav .phone {
+    margin-left: 0;
+    padding-right: 0;
+  }
+  nav button {
+    padding-right: 0;
+  }
+
+  .restaurants {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 50px;
+    margin-left: 35px;
+    margin-right: 35px;
+  }
+
+  article h2 {
+    margin-left: 50px;
+  }
+
+  footer {
+    padding-left: 35px;
+  }
+}
+@media all and (min-width: 1024px) {
+  .restaurants {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 50px;
+    margin-left: 35px;
+    margin-right: 35px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
