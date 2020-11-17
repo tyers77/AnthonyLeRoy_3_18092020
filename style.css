@@ -150,6 +150,10 @@ article h2 {
   margin-left: 15px;
   font-size: 1.35em;
 }
+article a {
+  text-decoration: none;
+  color: black;
+}
 article figure {
   position: relative;
   width: 100%;
@@ -180,7 +184,6 @@ article figcaption {
   margin-top: 10px;
   margin-left: 10px;
   padding-bottom: 1px;
-  text-decoration: none;
 }
 article i {
   position: absolute;

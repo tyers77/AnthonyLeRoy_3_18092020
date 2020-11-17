@@ -17,7 +17,7 @@ body{
     margin: 0;
     padding: 0;
 
-    background-image: url("images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+    background-image: url("images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: 100% 4%;
@@ -26,6 +26,7 @@ body{
         font-family: "roboto";
     }
 header{
+    background-color: white;
     position: relative;
     width: 100%;
     margin-bottom: 20px;
@@ -145,5 +146,6 @@ footer{
             font-size: 2.5em;
         }
     }
+
     
 }
