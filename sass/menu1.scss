@@ -28,13 +28,16 @@ body{
 header{
     position: relative;
     width: 100%;
-    margin-bottom: 20px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    background-color: #fff;
     a:visited{
         color: black;
     }
     i{
      position: absolute;
      left: 25px;
+     top: 20px;
     }
     img{
         image-rendering: optimizeQuality;
@@ -94,6 +97,10 @@ section{
             font-size: 1em;
         }
     }
+    a{
+        text-decoration: none;
+        color: #fff;
+    }
 .command{
         display: block;
         margin: auto;
@@ -140,10 +147,14 @@ footer{
             font-size: 2.5em;
         }
     header{
-        padding-top: 1px;
+        
         i{
             font-size: 2.5em;
         }
     }
+    footer{
+       padding-bottom: auto;
+    }
+    
     
 }
