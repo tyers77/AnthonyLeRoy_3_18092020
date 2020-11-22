@@ -10,6 +10,8 @@
   font-family: "shrikhand";
   src: url("fonts/Shrikhand-Regular.ttf");
 }
+/*variables*/
+/*mixins*/
 body {
   font-family: "roboto";
   width: 100%;
@@ -21,7 +23,6 @@ body button {
 }
 
 header img {
-  image-rendering: optimizeQuality;
   display: block;
   margin: auto;
   width: 50%;
@@ -74,14 +75,21 @@ header img {
   text-decoration: none;
   color: #fff;
 }
-.explorer button {
+.explorer .btn {
   display: block;
+  width: 55%;
   margin: auto;
   border-radius: 50px;
   padding: 15px;
-  color: white;
+  color: #fff;
   background-image: linear-gradient(#ff79da, #9356dc);
   border: none;
+  transition: background-color 500ms, box-shadow 500ms;
+}
+.explorer .btn:hover {
+  box-shadow: 0px 5px 5px 0px #808080;
+  background-image: linear-gradient(#ff79da, #9356dc);
+  opacity: 90%;
 }
 
 nav h2 {
@@ -99,13 +107,13 @@ nav ul {
 }
 nav span {
   position: absolute;
-  left: -10px;
+  left: -15px;
   top: 9px;
-  color: white;
+  color: #fff;
   border: 1px solid #9356dc;
   border-radius: 50%;
   background-color: #9356dc;
-  padding: 5px;
+  padding: 5px 10px;
 }
 nav li {
   width: 100%;
@@ -121,18 +129,21 @@ nav button {
   border-radius: 12px;
   background-color: #e4e2e2;
   border: none;
-  box-shadow: 0px 2px 5px 2px grey;
+  box-shadow: 0px 3px 3px 0px #808080;
+  transition: background-color 500ms, box-shadow 500ms;
 }
 nav button:hover {
   background-color: #c2aeda;
+  box-shadow: 0px 5px 5px 0px #808080;
+}
+nav button:hover i {
+  color: #9356dc;
 }
 nav i {
   margin-right: 20px;
 }
-nav i:hover {
-  color: #9356dc;
-}
-nav .phone {
+
+.phone {
   margin-left: 12px;
   padding-right: 5px;
 }
@@ -144,7 +155,6 @@ article {
 article div {
   padding-left: 15px;
   padding-right: 15px;
-  padding-bottom: 30px;
 }
 article h2 {
   font-weight: 900;
@@ -156,7 +166,7 @@ article h2 {
 }
 article a {
   text-decoration: none;
-  color: black;
+  color: #000;
 }
 article figure {
   position: relative;
@@ -164,8 +174,8 @@ article figure {
   margin: 0;
   margin-bottom: 15px;
   border-radius: 15px;
-  background-color: white;
-  box-shadow: 0px 2px 5px 2px grey;
+  background-color: #fff;
+  box-shadow: 0px 3px 3px 0px #808080;
 }
 article img {
   width: 100%;
@@ -177,14 +187,14 @@ article button {
   position: absolute;
   right: 15px;
   top: 15px;
-  color: green;
+  color: #008000;
   background-color: #99e2d0;
   border-radius: 3px;
   border: none;
 }
 article figcaption {
   position: relative;
-  font-weight: 900;
+  font-weight: bolder;
   margin-top: 10px;
   margin-left: 10px;
   padding-bottom: 1px;
@@ -192,12 +202,86 @@ article figcaption {
 article i {
   position: absolute;
   right: 25px;
+  top: 0px;
+  font-weight: bolder;
   font-size: 1.5em;
 }
 article input {
   display: none;
-  border: none;
-  font-size: 1.5em;
+}
+article #heart:checked ~ label i {
+  font-weight: bolder;
+  background: linear-gradient(#ff79da, #9356dc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadein 3s;
+  -moz-animation: fadein 3s;
+  -webkit-animation: fadein 3s;
+}
+@keyframes fadein {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
+}
+article #heart1:checked ~ label i {
+  font-weight: bolder;
+  background: linear-gradient(#ff79da, #9356dc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadein 3s;
+  -moz-animation: fadein 3s;
+  -webkit-animation: fadein 3s;
+}
+@keyframes fadein {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
+}
+article #heart2:checked ~ label i {
+  font-weight: bolder;
+  background: linear-gradient(#ff79da, #9356dc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadein 3s;
+  -moz-animation: fadein 3s;
+  -webkit-animation: fadein 3s;
+}
+@keyframes fadein {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
+}
+article #heart3:checked ~ label i {
+  font-weight: bolder;
+  background: linear-gradient(#ff79da, #9356dc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadein 3s;
+  -moz-animation: fadein 3s;
+  -webkit-animation: fadein 3s;
+}
+@keyframes fadein {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
+}
+article label:hover i {
+  cursor: pointer;
+  background: linear-gradient(#ff79da, #9356dc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 article p {
   font-weight: normal;
@@ -205,7 +289,7 @@ article p {
 }
 
 footer {
-  background-color: black;
+  background-color: #000;
   padding-top: 15px;
   padding-bottom: 15px;
 }
@@ -226,15 +310,25 @@ footer i {
 footer .ustensils {
   margin-right: 18px;
 }
+footer a {
+  text-decoration: none;
+  color: #fff;
+}
 
 @media all and (min-width: 768px) {
   .explorer i {
     margin-left: 30%;
   }
+  .explorer .btn {
+    width: 30%;
+  }
 
   nav ul {
     display: flex;
-    column-gap: 20px;
+    justify-content: space-around;
+  }
+  nav li {
+    width: 30%;
   }
   nav .phone {
     margin-left: 0;
@@ -261,6 +355,10 @@ footer .ustensils {
   }
 }
 @media all and (min-width: 1024px) {
+  header img {
+    width: 40%;
+  }
+
   .restaurants {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;

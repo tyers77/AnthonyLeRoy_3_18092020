@@ -4,7 +4,7 @@
   "description": "ohmyfood",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/menu3.scss:stylemenu3.css"
+    "sass": "sass --watch ./sass/menu.scss:stylemenu.css"
   },
   "author": "",
   "license": "ISC"

@@ -1,16 +1,6 @@
-@font-face{
-    font-family: "roboto";
-    src: url("fonts/Roboto-Black.ttf");
-    src: url("fonts/Roboto-Bold.ttf");
-    src: url("fonts/Roboto-Light.ttf");
-    src: url("fonts/Roboto-Medium.ttf.ttf");
-    src: url("fonts/Roboto-Regular.ttf");
+@import "./base/fonts";
+@import "./utils/variables";
 
-}
-@font-face{
-    font-family: "shrikhand";
-    src: url("fonts/Shrikhand-Regular.ttf");
-}
 body{
     font-family: "roboto";
     width: 100%;
@@ -26,34 +16,16 @@ body{
         font-family: "roboto";
     }
 header{
-    position: relative;
-    width: 100%;
-    padding-top: 1px;
-    padding-bottom: 1px;
-    background-color: #fff;
-    a:visited{
-        color: black;
-    }
-    i{
-     position: absolute;
-     left: 25px;
-     top: 20px;
-    }
-    img{
-        image-rendering: optimizeQuality;
-        display: block;
-        margin: auto;
-        width: 50%;
-        margin-bottom: 10px;
-        margin-top: 20px;
-    }
-}
+    @include header;
+    @include icon_back;
+    @include header_img;
+     }
 section{
         width: 100%;
         border: 1px solid transparent;
         border-left: none;
         border-right: none;
-        background-color: rgb(228, 226, 226);
+        background-color: $background;
         border-radius: 35px 35px 0 0;
         margin-top: 190px;
         
@@ -66,77 +38,34 @@ section{
         margin-left: 15px;
         margin-right: 25px;
     }
+    input{
+        display: none;
+    }
+    #heart:checked ~ label i{
+        @include heart
+    }
     h2{
 
         font-weight: lighter;
         margin-left: 15px;
-        border-bottom: 3px solid #99e2d0;
+        border-bottom: 3px solid $tertiary;
         width: 20%;
 
     }
-    button{
-        width: 94%;
-        background-color: white;
-        margin-left: 10px;
-        margin-bottom: 15px;
-        border-radius: 12px;
-        border: none;
-        box-shadow: 0px 2px 5px 2px grey;
-        text-align: left;
-        padding-right: 15px;
-        padding-left: 13px;
-        padding-top: 10px;
-        h3{
-            margin: 0;
-
+    figure{
+        @include figure;
         }
-        p{
-            display: flex;
-            justify-content: space-between;
-            margin-top: 5px;
-            font-size: 1em;
-        }
-    }
-    a{
-        text-decoration: none;
-        color: #fff;
     }
 .command{
-        display: block;
-        margin: auto;
-        margin-top: 30px;
-        margin-bottom: 60px;
-        width: 50%;
-        border-radius: 50px;
-        padding: 15px;
-        color: white;
-        background-image: linear-gradient(#ff79da, #9356dc);
-        border: none;
-        text-align: center;
+        @include btn_command;
+}
+a{
+    text-decoration: none;
+    color: #fff;
 }
 }
 footer{
-    background-color: black;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    h3{
-        font-family: "shrikhand"; 
-        color: #fff;
-        font-weight: 100;
-        margin: 0;
-        margin-left: 15px;
-    }
-    p{
-        color: #fff;
-        margin-left: 15px;
-    }
-    i{
-        margin-right: 10px;
-    }
-    .ustensils{
-        margin-right: 18px;
-    }
-}
+    @include footer
 }
 @media all and(min-width:768px)
 {  
@@ -152,9 +81,15 @@ footer{
             font-size: 2.5em;
         }
     }
-    footer{
-       padding-bottom: auto;
+    .command{
+        width: 30% !important;
     }
     
-    
+}
+@media all and (min-width: 1024px){
+    header{
+        img{
+            width: 40% !important;
+        }
+    }
 }

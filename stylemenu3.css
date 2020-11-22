@@ -131,6 +131,10 @@ body footer i {
 body footer .ustensils {
   margin-right: 18px;
 }
+body footer a {
+  text-decoration: none;
+  color: #ffff;
+}
 
 @media all and (min-width: 768px) {
   .responsive {
