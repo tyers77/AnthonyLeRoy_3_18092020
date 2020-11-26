@@ -49,12 +49,16 @@ section{
                         font-weight: lighter;
                         margin-left: 15px;
                         border-bottom: 3px solid $tertiary;
-                        width: 20%;
+                        width: 15%;
+                        font-size: 1.2em!important;
+                    }
+                    ul{
+                        padding-left: 0;
                     }
                             .entrees{
-                                animation: fadein 1.5s;
-                                -moz-animation: fadein 1.5s;
-                                -webkit-animation: fadein 1.5s; 
+                                animation: fadein 2s;
+                                -moz-animation: fadein 2s;
+                                -webkit-animation: fadein 2s; 
                             }
                                 @keyframes fadein {
                                     from {
@@ -65,9 +69,9 @@ section{
                                     }
                                 }
                                     .plats{
-                                        animation: fadein 3s;
-                                        -moz-animation: fadein 3s; 
-                                        -webkit-animation: fadein 3s; 
+                                        animation: fadein 3.5s;
+                                        -moz-animation: fadein 3.5s; 
+                                        -webkit-animation: fadein 3.5s; 
                                     }
                                         @keyframes fadein {
                                             from {
@@ -78,9 +82,9 @@ section{
                                             }
                                         }
                                     .desserts{
-                                        animation: fadein 4.5s;
-                                        -moz-animation: fadein 4.5s; 
-                                        -webkit-animation: fadein 4.5s; 
+                                        animation: fadein 5s;
+                                        -moz-animation: fadein 5s; 
+                                        -webkit-animation: fadein 5s; 
                                     }
                                         @keyframes fadein {
                                             from {
@@ -91,56 +95,59 @@ section{
                                             }
                                         }
                                     
-                                        figure{
-                                            @include figure;}
-                                           /* cursor: pointer;
-                                        label i{
+                                        li{
+                                            @include li;
                                             cursor: pointer;
-                                            color: #fff;
-                                            font-size: 1.5em;
-                                            background-color: $tertiary;
-                                            transform: rotate(0deg) ;
-                                             i:hover{
-                                                transform: rotate(360deg);
-                                            }
-                                        }
-                                        #choice:checked ~ label i{
-                                            animation: slide-in-fwd-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-                                            transform: rotate(360deg);
-                                        }
-                                            @keyframes slide-in-fwd-right {
-                                                0% {
-                                                  transform: translateZ(140px) translateX(100px);
-                                                  opacity: 0;
-                                                }
-                                                100% {
-                                                  transform: translateZ(0) translateX(0);
-                                                  opacity: 1;
-                                                }
-                                            }
-                                        }
-                                    /*figure:hover{
-                                            animation: slide-in-fwd-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;}
-                                         
-                                            @keyframes slide-in-fwd-right {
-                                                0% {
-                                                  transform: translateZ(140px) translateX(100px);
-                                                  opacity: 0;
-                                                }
-                                                100% {
-                                                  transform: translateZ(0) translateX(0);
-                                                  opacity: 1;
-                                                }
-                                            }*/
                                             
+                                            .box{
+                                                background-color: $tertiary;
+                                                width: 0;
+                                            }
+                                            .descriptive:hover ~.box{
+                                                animation: boxslide 500ms  ;
+                                                -webkit-animation: boxslide 500ms  ;
+                                                animation-fill-mode: forwards;
+                                            }
+                                           
+                                            @keyframes boxslide {
+                                                0%{
+                                                    width: 55px;
+
+                                                    transform: translate(55px);
+                                                }
+                                                100%{
+                                                    width: 55px;
+                                                    transform: translate(1px);
+                                                }   
+                                            }
+                                            .descriptive:hover ~.box i{
+                                                animation: iconrotate 1000ms;
+                                                -webkit-animation: iconrotate 1000ms;
+                                                animation-fill-mode: forwards;
+                                            }
+                                            @keyframes iconrotate {
+                                                0%{
+                                                    transform: rotate(1turn);
+                                                }
+                                                100%{
+                                                    transform: rotate(0);
+                                                }   
+                                            }
+                                            /*.descriptive:hover {
+                                                max-width: 258px;
+                                                overflow: hidden;
+                                                white-space: nowrap;
+                                                text-overflow: ellipsis;
+                                            }*/
+                                        }
+                                              
 }
 .command{
     @include btn_command;
     transition: background-color 500ms, box-shadow 500ms;
         &:hover{
             box-shadow: 0px 5px 5px 0px #808080;
-            background-image: linear-gradient($secondary, $primary,);
-            opacity: 90%;
+            opacity: 0.95;
         }
 }
     a{

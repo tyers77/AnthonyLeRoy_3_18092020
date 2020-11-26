@@ -10,7 +10,7 @@ body{
     }
 }
 header{
-    @include header_img
+    @include header_img;
 }
 .explorer{
     background-color: $background;
@@ -68,12 +68,12 @@ header{
                                 transition: background-color 500ms, box-shadow 500ms;
                                     &:hover{
                                         box-shadow: 0px 5px 5px 0px #808080;
-                                        background-image: linear-gradient($secondary, $primary,);
-                                        opacity: 90%;
+                                        opacity: 0.95;
                                     }
                             }
 }
 nav{
+  position: relative; 
     h2{
         font-weight: 900;
         margin-bottom: 0;
@@ -128,6 +128,43 @@ nav{
                                         margin-left: 12px;
                                         padding-right: 5px;
                                     }
+                                
+ /* a mettre dans le body?*/            .spin{
+                                        position: absolute;
+                                        z-index: 1;
+                                        left: calc(50% - 50px);
+                                        top: calc(50% - 50px);
+                                        
+                                        border: 8px solid #fff;
+                                        border-radius: 50%;
+                                        border-top: 8px solid $primary;
+                                        border-right: 8px solid $secondary;
+                                        border-bottom: 8px solid $primary;
+                                        border-left: 8px solid $secondary;
+                                        width: 100px;
+                                        height: 100px;
+                                        -webkit-animation:spin 3s linear;
+                                        animation: spin 3s linear ;
+                                        animation-fill-mode: forwards;
+                                    }
+                                    @keyframes spin {
+                                        0% {
+                                          -webkit-transform: rotate(0) ;
+                                          transform: rotate(0) scale(1);
+                                        }
+                                        99%{
+                                            -webkit-transform: rotate(5turn) scale(1);
+                                            transform: rotate(5turn) scale(1);
+                                        }
+                                        100% {
+                                          -webkit-transform: rotate(6turn);
+                                          transform: rotate(6turn) scale(0);
+                                        }
+                                    }
+                                    
+                                  
+                        
+                                     
 article{
     width: 100%;
     background-color: $background;
