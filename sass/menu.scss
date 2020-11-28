@@ -98,10 +98,8 @@ section{
                                         li{
                                             @include li;
                                             cursor: pointer;
-                                            
-                                            .box{
-                                                background-color: $tertiary;
-                                                width: 0;
+                                            .descriptive:hover{
+                                                min-width: 80%;
                                             }
                                             .descriptive:hover ~.box{
                                                 animation: boxslide 500ms  ;
@@ -111,12 +109,11 @@ section{
                                            
                                             @keyframes boxslide {
                                                 0%{
-                                                    width: 55px;
-
-                                                    transform: translate(55px);
+                                                    width: 48px;
+                                                    transform: translate(46px);
                                                 }
                                                 100%{
-                                                    width: 55px;
+                                                    width: 48px;
                                                     transform: translate(1px);
                                                 }   
                                             }
@@ -133,12 +130,7 @@ section{
                                                     transform: rotate(0);
                                                 }   
                                             }
-                                            /*.descriptive:hover {
-                                                max-width: 258px;
-                                                overflow: hidden;
-                                                white-space: nowrap;
-                                                text-overflow: ellipsis;
-                                            }*/
+                                          
                                         }
                                               
 }
@@ -158,12 +150,16 @@ section{
 footer{
     @include footer
 }
+@media all and(min-width:375px){
+    br{
+        display: none;
+    }
+}
 @media all and(min-width:768px)
 {  
-.responsive{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}
+    li{
+        width: 80%;
+    }
     h1{
         font-size: 2.5em;
     }
@@ -183,4 +179,8 @@ footer{
             width: 40% !important;
         }
     }
+        .responsive{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
 }
