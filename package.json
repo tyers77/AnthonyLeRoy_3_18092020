@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "sass": "sass --watch ./sass/menu.scss:stylemenu.css",
-    "sass1": "sass1 --watch ./sass/menu.scss:stylemenu.css"
+    "sass1":"sass --watch ./sass/main.scss:style.css" 
   },
   "author": "",
   "license": "ISC"
 }
+
