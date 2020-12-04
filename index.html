@@ -1,81 +1,90 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <script src="https://kit.fontawesome.com/45eba3c3b0.js" crossorigin="anonymous"></script>
-        <title>ohmyfood</title>
-    </head>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description"
+        content="Ohmyfood est une entreprise de commande de repas en ligne. Notre concept permet de composer son propre menu et réduire le temps d'attente.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://kit.fontawesome.com/45eba3c3b0.js" crossorigin="anonymous"></script>
+    <title>ohmyfood</title>
+</head>
+
 <body>
     <header>
         <img class="logo" src="images/logo/ohmyfood.png" alt="logo du site" />
     </header>
-            
-        <div class="explorer">
-                    <form method="post">
-                        <i class="fas fa-map-marker-alt"></i>
-                            <input class="textarea" type="text" name="recherche" value="Paris, Belleville"></form>
-                <h2>Réservez le menu qui vous convient</h2>
-                <p>Découvrez des restaurants d'exception, <br>sélectionnés par nos soins.</p>
-                <a href="#"><p class="btn">Explorer nos restaurants</p></a>
-        </div>   
 
-        <nav>
-            <h2>Fonctionnement</h2>
-            <div class="spin"> </div>
-                <ul>
-                    <li><button><span>1</span><i class="fas fa-mobile-alt phone"></i>Choisissez un restaurant</button></li>
-                    <li><button><span>2</span><i class="fas fa-list-ul"></i>Composez votre menu</button></li>
-                    <li><button><span>3</span><i class="fas fa-store"></i>Dégustez au restaurant</button></li>
-                </ul>
-        </nav>
+    <div class="explorer">
+        <form method="post">
+            <i class="fas fa-map-marker-alt"></i>
+            <input class="textarea" type="text" name="recherche" value="Paris, Belleville"></form>
+        <h2>Réservez le menu qui vous convient</h2>
+        <p>Découvrez des restaurants d'exception, <br>sélectionnés par nos soins.</p>
+        <a href="#">
+            <p class="btn">Explorer nos restaurants</p>
+        </a>
+    </div>
+
+    <nav>
+        <h2>Fonctionnement</h2>
+        <div class="spin"> </div>
+        <ul>
+            <li><button><span>1</span><i class="fas fa-mobile-alt phone"></i>Choisissez un restaurant</button></li>
+            <li><button><span>2</span><i class="fas fa-list-ul"></i>Composez votre menu</button></li>
+            <li><button><span>3</span><i class="fas fa-store"></i>Dégustez au restaurant</button></li>
+        </ul>
+    </nav>
 
     <article>
         <h2>Restaurants</h2>
         <div class="restaurants">
-                <figure>
-                <a href="menu.html"><img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="photo"/></a>
+            <figure>
+                <a href="menu.html"><img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                        alt="photo" /></a>
                 <button>Nouveau</button>
-                    <figcaption>La palette du goût
-                        <div>
-                            <input type="checkbox" id="heart" name="heart">
-                            <label for="heart"><i class="far fa-heart heart"></i></label>
-                          </div>
-                          
-                        <p>Ménilmontant</p>
-                    </figcaption>
+                <figcaption>La palette du goût
+                    <div>
+                        <input type="checkbox" id="heart" name="heart">
+                        <label for="heart"><i class="far fa-heart heart"></i></label>
+                    </div>
+
+                    <p>Ménilmontant</p>
+                </figcaption>
             </figure>
             <figure>
-                <a href="menu1.html"><img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="photo"/></a>
-                    <button>Nouveau</button>
-                    <figcaption>La note enchantée
-                        <div>
-                            <input type="checkbox" id="heart1" name="heart1">
-                            <label for="heart1"><i class="far fa-heart heart"></i></label>
-                          </div>
-                        <p>Charonne</p>
-                    </figcaption>
+                <a href="menu1.html"><img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="photo" /></a>
+                <button>Nouveau</button>
+                <figcaption>La note enchantée
+                    <div>
+                        <input type="checkbox" id="heart1" name="heart1">
+                        <label for="heart1"><i class="far fa-heart heart"></i></label>
+                    </div>
+                    <p>Charonne</p>
+                </figcaption>
             </figure>
             <figure>
-                <a href="menu2.html"><img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="photo"/></a>
-                    <figcaption>À la française
-                        <div>
-                            <input type="checkbox" id="heart2" name="heart2">
-                            <label for="heart2"><i class="far fa-heart heart"></i></label>
-                          </div>
-                        <p>Cité rouge</p>
-                    </figcaption>
+                <a href="menu2.html"><img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+                        alt="photo" /></a>
+                <figcaption>À la française
+                    <div>
+                        <input type="checkbox" id="heart2" name="heart2">
+                        <label for="heart2"><i class="far fa-heart heart"></i></label>
+                    </div>
+                    <p>Cité rouge</p>
+                </figcaption>
             </figure>
             <figure>
-                <a href="menu3.html"><img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="photo"/></a>
-                    <figcaption>Le délice des sens
-                        <div>
-                            <input type="checkbox" id="heart3" name="heart3">
-                            <label for="heart3"><i class="far fa-heart heart"></i></label>
-                          </div>
-                        <p>Folie-Méricourt</p>
-                    </figcaption>
+                <a href="menu3.html"><img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+                        alt="photo" /></a>
+                <figcaption>Le délice des sens
+                    <div>
+                        <input type="checkbox" id="heart3" name="heart3">
+                        <label for="heart3"><i class="far fa-heart heart"></i></label>
+                    </div>
+                    <p>Folie-Méricourt</p>
+                </figcaption>
             </figure>
         </div>
     </article>
@@ -88,4 +97,5 @@
         <p><a href="mailto">Contact</a></p>
     </footer>
 </body>
+
 </html>
